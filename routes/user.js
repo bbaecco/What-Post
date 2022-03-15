@@ -1,5 +1,8 @@
 var express = require('express');
+var User = require('../models').User;
 var router = express.Router();
+const logger = require('../config/logger');
+const userController = require('../controllers/userController');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,5 +11,8 @@ router.get('/', function(req, res, next) {
     "result_test": "ok"
   })
 });
+
+//회원가입
+router.post('/signup', userController.signup);
 
 module.exports = router;

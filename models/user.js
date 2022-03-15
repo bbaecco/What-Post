@@ -21,12 +21,12 @@ module.exports = ((sequelize,DataTypes)=>{
         email:{
           type: Sequelize.STRING(40),
           allowNull: false,
-        },
-        provider :{ // 뭐로 로그인 했는지 : 카카오, 로컬,,
-            type: Sequelize.STRING(10),
-            allowNull: false,
-            defaultValue: 'local',
-        },
+        }
+        // provider :{ // 뭐로 로그인 했는지 : 카카오, 로컬,,
+        //     type: Sequelize.STRING(10),
+        //     allowNull: false,
+        //     defaultValue: 'local',
+        // },
 
     },{
         timestamps:true,
