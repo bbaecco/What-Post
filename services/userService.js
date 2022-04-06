@@ -13,5 +13,19 @@ module.exports = {
       console.error(err);
       throw err;
     }
+  },
+  signin: async (userid, pwd) => {
+    try {
+      const result = await user.findOne({
+        where: {
+          userid,
+          pwd
+        }
+      });
+      return result;
+    } catch(err) {
+      console.error(err);
+      throw err;
+    }
   }
 }
